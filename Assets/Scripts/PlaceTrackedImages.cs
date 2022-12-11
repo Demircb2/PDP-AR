@@ -31,7 +31,7 @@ public class PlaceTrackedImages : MonoBehaviour
             // Now loop over the array of prefabs
             foreach (var curPrefab in ArPrefabs)
             {
-                if (string.Compare(curPrefab.name, imageName, StringComparison.OrdinalIgnoreCase) == 0)
+                if (string.Compare(curPrefab.name, imageName, StringComparison.OrdinalIgnoreCase) == 0
                     && !_instantiatedPrefabs.ContainsKey(imageName))
                         {
                     var newPrefab = Instantiate(curPrefab, trackedImage.transform);
@@ -47,7 +47,7 @@ public class PlaceTrackedImages : MonoBehaviour
         {
             Destroy(_instantiatedPrefabs[trackedImage.referenceImage.name]);
 
-            _instantiatedPrefabs.Remove(trackedImage.referenceImage.name);
+            _instantiatedPrefabs.Remove(trackedImage.referenceImage.name); 
         }
     }
 
