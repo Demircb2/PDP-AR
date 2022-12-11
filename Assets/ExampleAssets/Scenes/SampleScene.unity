@@ -382,7 +382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e38d5690581064a97c3ad00b816e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ArPrefabs: []
+  ArPrefabs:
+  - {fileID: 8174622602687124138, guid: 40090caa13d2d7c469c0a128045a4b53, type: 3}
 --- !u!114 &388525037
 MonoBehaviour:
   m_ObjectHideFlags: 0
