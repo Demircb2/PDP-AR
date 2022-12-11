@@ -39,6 +39,16 @@ public class PlaceTrackedImages : MonoBehaviour
                 }
             }
         }
+        foreach (var trackedImage in eventArgs.updated)
+        {
+            _instantiatedPrefabs[trackedImage.referenceImage.name].SetActive(trackedImage.trackingState ==TrackingState.Tracking);
+        }
+        foreach (var trackedImage in eventArgs.removed)
+        {
+            Destroy(_instantiatedPrefabs[trackedImage.referenceImage.name]);
+
+            _instantiatedPrefabs.Remove(trackedImage.referenceImage.name);
+        }
     }
 
     private void OnDisable()
